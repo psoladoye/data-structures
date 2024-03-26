@@ -1,12 +1,12 @@
 package main
 
-import . "github.com/psoladoye/datastructures/linkedlist"
+import linkedList "github.com/psoladoye/datastructures/linkedlist"
 
 func main() {
-	linkedList := LinkedList(&SinglyLinkedList{})
-	linkedList.Prepend(NewNode(10))
-	linkedList.Prepend(NewNode(24))
-	linkedList.Prepend(NewNode(1))
-	linkedList.Prepend(NewNode(35))
-	linkedList.Print()
+	list := linkedList.LinkedList(&linkedList.SinglyLinkedList{})
+	list.Prepend(linkedList.NewNode(10))
+	list.Prepend(linkedList.NewNode(24))
+	list.Prepend(linkedList.NewNode(1))
+	list.Prepend(linkedList.NewNode(35))
+	list.Print()
 }
