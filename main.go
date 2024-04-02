@@ -1,12 +1,10 @@
+/*
+Copyright © 2024 NAME HERE <psoladoye@gmail.com>
+*/
 package main
 
-import linkedList "github.com/psoladoye/datastructures/linkedlist"
+import "github.com/psoladoye/datastructures/cmd"
 
 func main() {
-	list := linkedList.LinkedList(&linkedList.SinglyLinkedList{})
-	list.Prepend(linkedList.NewNode(10))
-	list.Prepend(linkedList.NewNode(24))
-	list.Prepend(linkedList.NewNode(1))
-	list.Prepend(linkedList.NewNode(35))
-	list.Print()
+	cmd.Execute()
 }
