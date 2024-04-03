@@ -1,10 +1,10 @@
-/*
-Copyright © 2024 NAME HERE <EMAIL ADDRESS>
-*/
+// Package cmd /*
 package cmd
 
 import (
-	linkedlist "github.com/psoladoye/datastructures/adts"
+	linkedlist "github.com/psoladoye/datastructures/adts/linkedlist"
+	"log"
+
 	"github.com/spf13/cobra"
 )
 
@@ -15,12 +15,20 @@ var linkedlistCmd = &cobra.Command{
 	Long:  `This linked list contains pointers for head and tail`,
 	Run: func(cmd *cobra.Command, args []string) {
 		list := linkedlist.LinkedList(&linkedlist.SinglyLinkedList{})
-		list.Prepend(linkedlist.NewNode(20))
-		list.Prepend(linkedlist.NewNode(1))
-		list.Prepend(linkedlist.NewNode(11))
-		list.Prepend(linkedlist.NewNode(9))
-		list.Prepend(linkedlist.NewNode(34))
+
+		list.Append(0)
+		list.Prepend(20)
+		list.Prepend(1)
+		list.Prepend(11)
+		list.Prepend(9)
+		list.Prepend(34)
 		list.Print()
+
+		list.Append(200)
+		list.Print()
+
+		log.Println(list.Head().GetData())
+		log.Println(list.Tail().GetData())
 	},
 }
 
